@@ -22,5 +22,8 @@ class ApplicationController < Sinatra::Base
     @recipe = Recipe.find_by_id(params[:id])
     redirect to '/show'
   end
+  
+  patch 'recipes/:id' do 
+    
 
 end
