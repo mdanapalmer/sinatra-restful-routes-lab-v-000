@@ -39,6 +39,8 @@ class ApplicationController < Sinatra::Base
   
   post '/recipe/:id/delete' do
     @recipe = Recipe.find_by_id(params[:id])
-    @recipe.destroy
+    @recipe.delete
+    redirect to 'index'
+  end
 
 end
