@@ -37,6 +37,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   
-  post '/recipe/show'
+  post '/recipe/:id/delete' do
+    
 
 end
