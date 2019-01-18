@@ -1,5 +1,5 @@
 class CreateRecipes < ActiveRecord::Migration
-  def down
+  def change
     drop_table :recipes
   end
 end
