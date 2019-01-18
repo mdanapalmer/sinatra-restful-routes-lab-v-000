@@ -6,4 +6,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.string :cook_time
     end
   end
+  
+  def drop
+    
 end
