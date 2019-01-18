@@ -1,6 +1,15 @@
+require './config/environment'
 
+class ApplicationController < Sinatra::Base
+  # register Sinatra::ActiveRecordExtension
+  set :views, Proc.new { File.join(root, "../views/") }
 
-get '/recipes/new' do #loads new form
+  configure do
+    set :public_folder, 'public'
+    set :views, 'app/views'
+  end
+
+  get '/recipes/new' do #loads new form
     erb :new
   end
 
